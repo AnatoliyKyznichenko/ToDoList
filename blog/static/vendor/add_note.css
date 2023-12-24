@@ -1,0 +1,46 @@
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+.add-note-form {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#noteContent {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.add-note-btn {
+    display: block;
+    width: 40%; /* Уменьшил ширину кнопки в два раза */
+    margin: 0 auto; /* Выравнил по центру */
+    padding: 6px 12px; /* Уменьшил размеры в два раза */
+    background-color: #007BFF; /* Голубой цвет */
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px; /* Уменьшил размер шрифта */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-note-btn:hover {
+    background-color: #0056b3; /* Темно-

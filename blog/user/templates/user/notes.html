@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'vendor/notes.css' %}">
+    <title>Заметки пользователя</title>
+</head>
+<body>
+    <h1>Заметки пользователя</h1>
+
+    {% for note in result_notes_get %}
+    <div class="note">
+        <p>{{ note.content }}</p>
+    </div>
+    {% endfor %}
+
+    <a href="{% url 'user:add_note' %}" style="background-color: #007BFF; color: #fff; padding: 10px 20px; border-radius: 5px; cursor: pointer; text-decoration: none;">
+    Добавить запись
+    </a>
+    <a href="{% url 'user:logout_user'%}" style="background-color: #007BFF; color: #fff; padding: 10px 20px; border-radius: 5px; cursor: pointer; text-decoration: none;">
+        Выход
+    </a>
+    <!-- Дополнительные заметки будут добавлены динамически -->
+
+</body>
+</html>
+

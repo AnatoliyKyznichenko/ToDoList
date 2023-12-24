@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'vendor/main.css/' %}"> <!-- Замените путем к вашему CSS-файлу -->
+    <title>Registration Page</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Our Site</h1>
+        <p>Register now to get started!</p>
+        <a href="{% url 'user:register' %}" class="btn btn-primary">Register</a> <!-- Замените 'registration' на ваш путь к регистрации -->
+        <a href="{% url 'user:login_user' %}" class="btn btn-primary">Authorization</a>
+    </div>
+</body>
+</html>

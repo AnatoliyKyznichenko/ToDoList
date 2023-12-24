@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'vendor/login.css' %}">
+    <title>Авторизация</title>
+</head>
+<body>
+    <div class="login-container">
+    <h1>Авторизация</h1>
+    <form action="{% url 'user:login_user'%}" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label class="small mb-1" for="{{ form.username.id_for_label }}">Имя пользователя</label>
+            {{ form.username }}
+        </div>
+        <div class="form-group">
+            <label class="small mb-1" for="{{ form.password.id_for_label }}">Пароль</label>
+            {{ form.password }}
+        </div>
+        <button type="submit">Войти</button>
+    </form>
+</div>
+
+
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+
+
+            alert('Вы вошли как: ' + username);
+
+        }
+    </script>
+
+</body>
+</html>
